@@ -1,0 +1,29 @@
+<form role="form" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+
+              {% for field in form %}
+                  <div>
+
+                      <label>
+                          {{ field.label_tag }}
+                      </label>
+
+                      {{field}}
+
+                  </div>
+
+              {% endfor %}
+
+            <button type="submit" name="login">Login</button>
+
+            &nbsp; &nbsp;
+            <span >
+              Don't have an account? <a href="" class="text-primary">Create</a>
+            </span>
+
+</form>
+
+
+{% if form.errors %}
+    <strong><p>Your username and password didn't match. Please try again.</p></strong>
+{% endif %}
