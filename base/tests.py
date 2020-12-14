@@ -8,6 +8,3 @@ def test_home_page(client):
     assert response.status_code == 200
 
 
-def test_login_page(client):
-    resp = client.get('/auth/login/')
-    assert resp.status_code == 200
