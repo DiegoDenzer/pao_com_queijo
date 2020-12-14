@@ -33,7 +33,6 @@ jobs:
         pipenv sync --dev
     - name: Test with pytest
       run: |
-        cp ../contrib/env-amostra .env
         pipenv run pytest --cov=../jogo_magico
     - name: Posting Coverage
       env:
