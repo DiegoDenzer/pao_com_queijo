@@ -30,7 +30,7 @@ jobs:
     - name: Install dependencies
       working-directory: ./exemplo
       run: |
-        pip install pipenv==2018.11.26
+        pip install pipenv==2020.11.15
         pipenv sync --dev
     - name: Test with pytest
       working-directory: ./exemplo
