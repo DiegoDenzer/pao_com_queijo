@@ -26,7 +26,7 @@ jobs:
         pipenv sync --dev
     - name: Test with pytest
       run: |
-        pipenv run pytest --cov=../jogo_magico
+        pipenv run pytest --cov=./ --cov-report=xml
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
