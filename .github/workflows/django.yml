@@ -28,17 +28,13 @@ jobs:
       with:
         python-version: 3.8
     - name: Install dependencies
-      working-directory: ./exemplo
       run: |
         pip install pipenv==2020.11.15
         pipenv sync --dev
     - name: Test with pytest
-      working-directory: ./exemplo
       run: |
-        cp ../contrib/env-amostra .env
         pipenv run pytest --cov=../jogo_magico
     - name: Posting Coverage
-      working-directory: ./exemplo
       env:
         CODECOV_TOKEN: "9e55c584-58f7-4553-936a-7b9b8e2e3223"
       run: |
